@@ -1,4 +1,3 @@
-# Chase Watson
 def encode(data):
     data_f = ''
     for i in range(0, len(data)):
