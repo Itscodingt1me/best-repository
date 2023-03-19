@@ -12,9 +12,7 @@ def decode(data):
         if int(i) <3:
             decoded_data += str(int(i)+7)
         else:
-            decoded_data += i
-        #this should work. however, I didn't test it because abc gives me an error.
-
+            decoded_data += str(int(i)-3)
     return decoded_data
 def main():
     while True:
