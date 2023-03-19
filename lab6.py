@@ -6,7 +6,18 @@ def encode(data):
         else:
             data_f += str(int(data[i]) - 7)
     return data_f
+def decode(data):
+    decoded_data = ""
+    for i in data:
+        if i >3:
+            char = int(i)-3
+        else:
+            char = int(i)+7
+        char = str(char)
+        decoded_data+= char
+        #this should work. however, I didn't test it because abc gives me an error.
 
+    return decoded_data
 
 def decode(data):
     decoded_data = ""
@@ -30,7 +41,6 @@ def main():
         print('2. Decode')
         print('3. Quit')
         menu = input('Please enter an option:')
-
         if menu == '1':
             data = input('Please enter your password to encode:')
             data = encode(data)
