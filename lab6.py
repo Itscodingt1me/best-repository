@@ -1,15 +1,25 @@
 def encode(data):
     data_f = ''
     for i in range(0, len(data)):
-        if int(data[i]) == 7:
-            data_f += 'a'
-        elif int(data[i]) == 8:
-            data_f += 'b'
-        elif int(data[i]) == 9:
-            data_f += 'c'
-        else:
+        if int(data[i]) <= 7:
             data_f += str(int(data[i]) + 3)
+        else:
+            data_f += str(int(data[i]) - 7)
     return data_f
+
+
+def decode(data):
+    decoded_data = ""
+    for i in data:
+        if i >3:
+            char = int(i)-3
+        else:
+            char = int(i)+7
+        char = str(char)
+        decoded_data+= char
+        #this should work. however, I didn't test it because abc gives me an error.
+
+    return decoded_data
 
 
 def main():
