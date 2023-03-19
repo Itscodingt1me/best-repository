@@ -26,8 +26,8 @@ def main():
             data = encode(data)
             print('Your password has been encoded and stored!')
 
-        #elif menu == '2':
-            #print('The encoded password is,', data, ',and the original password is', decode(data), '.')
+        elif menu == '2':
+            print('The encoded password is,', data, ',and the original password is', decode(data), '.')
 
         elif menu == '3':
             break
