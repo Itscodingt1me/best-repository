@@ -9,30 +9,13 @@ def encode(data):
 def decode(data):
     decoded_data = ""
     for i in data:
-        if i >3:
-            char = int(i)-3
+        if int(i) <3:
+            decoded_data += str(int(i)+7)
         else:
-            char = int(i)+7
-        char = str(char)
-        decoded_data+= char
+            decoded_data += i
         #this should work. however, I didn't test it because abc gives me an error.
 
     return decoded_data
-
-def decode(data):
-    decoded_data = ""
-    for i in data:
-        if i >3:
-            char = int(i)-3
-        else:
-            char = int(i)+7
-        char = str(char)
-        decoded_data+= char
-        #this should work. however, I didn't test it because abc gives me an error.
-
-    return decoded_data
-
-
 def main():
     while True:
         print('Menu')
